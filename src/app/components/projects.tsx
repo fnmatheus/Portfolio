@@ -45,10 +45,10 @@ function Projects({ addToRefs }: any) {
   }
   
   return (
-    <section id="projects" ref={ addToRefs } className="flex flex-col justify-center items-center px-[17px] gap-4 pb-4">
-      <h2 className="font-bold text-3xl">Meus Projetos</h2>
+    <section id="projects" ref={ addToRefs } className="flex flex-col justify-center items-center px-[17px] gap-4 pb-20">
+      <h2 className="font-bold text-3xl lg:text-5xl mb-4">Meus Projetos</h2>
       <section className="w-full">
-        <div className="flex justify-around px-[17px] pb-4">
+        <div className="flex justify-around lg:justify-center lg:gap-12 px-[17px] pb-4">
           <div className={`${fillter === 'all' ? 'bg-gradient-to-l from-lightBlue to-purple' : 'bg-grey'} w-[96px] h-[27px] rounded-full flex justify-center items-center p-[2px]`}>
             <button id="all" onClick={handleFillter} className="w-full h-full rounded-full bg-darkGrey flex justify-center items-center">
               todos
@@ -66,14 +66,14 @@ function Projects({ addToRefs }: any) {
           </div>
         </div>
         <div>
-          <ul className="grid grid-cols-2 gap-4">
+          <ul className="grid grid-cols-2 gap-4 border-2 lg:place-items-center">
             {
               projectsArr.length > 0 &&
               projectsArr.filter(project => project.tags.includes(fillter)).map((project, i) => 
-                <li key={i} className="w-[172px] h-max flex flex-col gap-2 justify-center items-center pb-2">
+                <li key={i} className="w-[172px] h-max flex flex-col gap-2 justify-center items-center">
                   <div
                     id={String(project.id)}
-                    className={`w-[172px] h-[125px] bg-center bg-contain rounded-[16px]`}
+                    className={`w-[172px] h-[125px] bg-center bg-contain rounded-[16px] justify-center`}
                     style={{backgroundImage: `url(${project.image})`}}
                     onClick={handleProject}
                   >
