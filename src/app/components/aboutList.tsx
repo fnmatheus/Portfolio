@@ -48,7 +48,7 @@ export default function AboutList() {
         </button>
       </div>
       <div className="h-[180px] lg:h-max">
-        <ul className="list-inside list-disc">
+        <ul className="list-inside list-disc grid grid-rows-5 grid-flow-col">
           {
             list !== undefined &&
             list[selected as keyof IHardSkillsList].map(item => <li key={item.name}>{ item.name }</li>)
