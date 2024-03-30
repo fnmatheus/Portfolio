@@ -5,14 +5,14 @@ const Code = 'https://lh3.googleusercontent.com/pw/AP1GczN1XgF69V2AhKaNhkmePuO6Y
 
 function About({ addToRefs }: any, ref: any) {
   return (
-    <section id="about" ref={ addToRefs } className="flex max-lg:flex-col justify-center items-center px-[34px] gap-8 lg:gap-32 pb-8 lg:pb-20">
+    <section id="about" ref={ addToRefs } className="flex max-lg:flex-col justify-center items-center px-[34px] gap-8 lg:gap-26 pb-8 lg:pb-20">
       {
         // eslint-disable-next-line @next/next/no-img-element
         <img src={Code} alt="about image" className="w-[400px] lg:w-[600px] rounded-2xl" />
       }
-      <section className="flex flex-col justify-center items-center gap-4 lg:w-[520px]">
+      <section className="flex flex-col justify-center items-center gap-4 lg:w-max">
         <h2 className="font-bold text-3xl lg:text-5xl text-left w-full">Sobre mim</h2>
-        <p className="text-justify lg:text-xl">
+        <p className="text-justify lg:text-lg">
           Sou um jovem mineiro, apaixonado em tecnologia e bem criativo!
           <br />
           <br />

@@ -1,3 +1,5 @@
+import React from 'react'
+
 interface IProject {
   name: string,
   image: string,
@@ -6,6 +8,13 @@ interface IProject {
   tags: string[],
   isOpenSource: boolean,
   id: number
+}
+
+interface IProjectCard extends IProject {
+  index: number,
+  hiddenProject: number,
+  handleProject(e: React.MouseEvent): void,
+  handleLink(e: React.MouseEvent): void
 }
 
 interface IHardSkills {
@@ -21,5 +30,6 @@ interface IHardSkillsList {
 
 export type {
   IProject,
-  IHardSkillsList
+  IHardSkillsList,
+  IProjectCard
 }
