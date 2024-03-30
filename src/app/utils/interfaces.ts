@@ -11,7 +11,6 @@ interface IProject {
 }
 
 interface IProjectCard extends IProject {
-  index: number,
   hiddenProject: number,
   handleProject(e: React.MouseEvent): void,
   handleLink(e: React.MouseEvent): void

@@ -1,9 +1,9 @@
 import { IProjectCard } from '../utils/interfaces';
 import { Code, Eye } from './svgs/Index';
 
-function ProjectCard({index, id, name, image, isOpenSource, codeLink, link, hiddenProject, handleProject, handleLink}: IProjectCard) {
+function ProjectCard({id, name, image, isOpenSource, codeLink, link, hiddenProject, handleProject, handleLink}: IProjectCard) {
   return (
-    <li key={index} className="w-[172px] h-max flex flex-col gap-2 justify-center items-center">
+    <li className="w-[172px] h-max flex flex-col gap-2 justify-center items-center">
       <div
         id={String(id)}
         className={`w-[172px] h-[125px] bg-center bg-contain rounded-[16px] justify-center`}

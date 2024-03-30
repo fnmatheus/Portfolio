@@ -71,7 +71,7 @@ function Projects({ addToRefs }: any) {
               projectsArr.length > 0 &&
               projectsArr.filter(project => project.tags.includes(fillter)).map((project, i) => (
                   <ProjectCard
-                    index={i}
+                    key={i}
                     id={project.id}
                     name={project.name}
                     image={project.image}
