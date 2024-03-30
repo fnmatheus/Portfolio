@@ -12,10 +12,10 @@ function Openning({}, ref: any) {
   }
 
   return (
-    <section className="pt-[60px] h-screen mb-20">
+    <section className="pt-[60px] h-screen lg:mb-20">
       <div className="h-full flex justify-center gap-24">
-        <div className="flex items-center max-lg:hidden w-4/12">
-          <div className="rounded-full w-max h-max p-[8px] bg-gradient-to-br from-lightBlue to-purple flex justify-center items-center">
+        <div className="flex items-center justify-center max-lg:hidden w-4/12">
+          <div className="rounded-full w-max h-max p-[4px] bg-gradient-to-br from-lightBlue to-purple flex justify-center items-center">
             {// eslint-disable-next-line @next/next/no-img-element
             <img src={Photo} alt="photo" className="rounded-full w-max h-max" />
             }
