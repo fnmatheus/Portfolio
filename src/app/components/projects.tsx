@@ -46,7 +46,7 @@ function Projects({ addToRefs }: any) {
   
   return (
     <section id="projects" ref={ addToRefs } className="flex flex-col justify-center items-center px-[17px] gap-4 pb-8 lg:pb-20">
-      <h2 className="font-bold text-3xl lg:text-5xl mb-4">Meus Projetos</h2>
+      <h2 className="font-bold text-3xl lg:text-4xl mb-4">Meus Projetos</h2>
       <section className="w-full">
         <div className="flex justify-around lg:justify-center lg:gap-12 px-[17px] pb-4">
           <div className={`${fillter === 'all' ? 'bg-gradient-to-l from-lightBlue to-purple' : 'bg-grey'} w-[96px] h-[27px] rounded-full flex justify-center items-center p-[2px]`}>

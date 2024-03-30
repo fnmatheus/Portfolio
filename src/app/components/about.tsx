@@ -11,7 +11,7 @@ function About({ addToRefs }: any, ref: any) {
         <img src={Code} alt="about image" className="w-[400px] lg:w-[600px] rounded-2xl" />
       }
       <section className="flex flex-col justify-center items-center gap-4 lg:w-max">
-        <h2 className="font-bold text-3xl lg:text-5xl text-left w-full">Sobre mim</h2>
+        <h2 className="font-bold text-3xl lg:text-4xl text-left w-full">Sobre mim</h2>
         <p className="text-justify lg:text-lg">
           Sou um jovem mineiro, apaixonado em tecnologia e bem criativo!
           <br />
