@@ -32,7 +32,7 @@ export default function AboutList() {
   };
 
   return (
-    <section className="w-full lg:w-[540px] flex flex-col gap-7">
+    <section className="w-full lg:w-[540px] flex flex-col gap-4 lg:gap-7">
       <div className="w-full flex justify-between font-bold text-lg">
         <button id='skills' onClick={handleButton} className="flex flex-col justify-center items-center">
           Skills
@@ -47,8 +47,8 @@ export default function AboutList() {
           <div className={`w-[40px] h-[3px] ${(selected !== 'certificates') ? 'bg-transparent' : 'bg-purple'} rounded-full`} />
         </button>
       </div>
-      <div className="h-[180px] lg:h-max">
-        <ul className="list-inside list-disc grid grid-rows-5 grid-flow-col">
+      <div className="h-max">
+        <ul className="list-inside list-disc grid lg:grid-cols-2">
           {
             list !== undefined &&
             list[selected as keyof IHardSkillsList].map(item => <li key={item.name}>{ item.name }</li>)
