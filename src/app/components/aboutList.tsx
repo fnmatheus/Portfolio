@@ -51,7 +51,7 @@ export default function AboutList() {
         <ul className="list-inside list-disc grid lg:grid-cols-2">
           {
             list !== undefined &&
-            list[selected as keyof IHardSkillsList].map(item => <li key={item.name}>{ item.name }</li>)
+            list[selected as keyof IHardSkillsList].map(item => <li key={item.name}><a href={item.url} target="_blank">{ item.name }</a></li>)
           }
         </ul>
       </div>
