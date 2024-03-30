@@ -45,7 +45,7 @@ function Projects({ addToRefs }: any) {
   }
   
   return (
-    <section id="projects" ref={ addToRefs } className="flex flex-col justify-center items-center px-[17px] gap-4 pb-20">
+    <section id="projects" ref={ addToRefs } className="flex flex-col justify-center items-center px-[17px] gap-4 pb-8 lg:pb-20">
       <h2 className="font-bold text-3xl lg:text-5xl mb-4">Meus Projetos</h2>
       <section className="w-full">
         <div className="flex justify-around lg:justify-center lg:gap-12 px-[17px] pb-4">
@@ -66,7 +66,7 @@ function Projects({ addToRefs }: any) {
           </div>
         </div>
         <div>
-          <ul className="grid grid-cols-2 gap-4 border-2 lg:place-items-center">
+          <ul className="flex flex-wrap justify-center gap-3 lg:gap-12 lg:place-items-center">
             {
               projectsArr.length > 0 &&
               projectsArr.filter(project => project.tags.includes(fillter)).map((project, i) => (
