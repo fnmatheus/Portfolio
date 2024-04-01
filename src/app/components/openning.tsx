@@ -2,10 +2,9 @@
 import { Email, GitHub, LinkedIn } from './svgs/Index';
 import { TypeAnimation } from 'react-type-animation';
 import React from 'react';
+import { IImagesByProps } from '../utils/interfaces';
 
-const Photo = 'https://lh3.googleusercontent.com/pw/AP1GczOHHMNBtwJ2dNf1crvCx-8O33rGkMmOn0fLZR0q_PhJaQuURQuhp-88GK4x8VJNLfJHCLqQauypMyAkE6jr2ndFHwiGXpJdXOzhft6u4QHRYpOFGmscuGlkpdRBA11-YyaigCmpAaHWc2iDRoU49ksG=w773-h773-s-no-gm?authuser=0';
-
-function Openning({}, ref: any) {
+function Openning({ photo }: IImagesByProps, ref: any) {
   const handleLink = (id: string) => {
     const currentRef = ref.current.filter((page: { id: string }) => page.id === id)[0];
     currentRef.scrollIntoView({ block: "center", behavior: 'smooth' });
@@ -17,7 +16,7 @@ function Openning({}, ref: any) {
         <div className="flex items-center justify-center max-lg:hidden w-4/12">
           <div className="rounded-full w-max h-max p-[4px] bg-gradient-to-br from-lightBlue to-purple flex justify-center items-center">
             {// eslint-disable-next-line @next/next/no-img-element
-            <img src={Photo} alt="photo" className="rounded-full w-max h-max" />
+            <img src={photo} alt="photo" className="rounded-full w-max h-max" />
             }
           </div>
         </div>
@@ -51,7 +50,7 @@ function Openning({}, ref: any) {
           </div>
           <div className="rounded-full w-[218px] h-[218px] bg-gradient-to-br from-lightBlue to-purple flex justify-center items-center lg:hidden">
             {// eslint-disable-next-line @next/next/no-img-element
-            <img src={Photo} alt="photo" className="rounded-full w-[214px] h-[214px]" />
+            <img src={photo} alt="photo" className="rounded-full w-[214px] h-[214px]" />
             }
           </div>
           <div className="flex w-full justify-center items-center gap-[52px]">
