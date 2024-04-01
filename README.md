@@ -5,7 +5,7 @@
 <h2 align="center">Portifolio para expor projetos e habilidades</h2>
 
 <h4 align="center"> 
-	🚧  Portifolio 🚀 Em construção...  🚧
+	✅  Portifolio 🚀 Em funcionamento  ✅
 </h4>
 
 Tabela de conteúdos
