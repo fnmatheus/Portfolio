@@ -21,9 +21,12 @@ function ProjectCard({id, name, image, isOpenSource, codeLink, link, hiddenProje
                   <Code />
                 </button>
               }
-              <button id={link} className="relative z-10" onClick={handleLink}>
-                <Eye />
-              </button>
+              {
+                link !== 'na' &&
+                <button id={link} className="relative z-10" onClick={handleLink}>
+                  <Eye />
+                </button>
+              }
             </div>
           </>
         }
