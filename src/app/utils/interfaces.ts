@@ -36,8 +36,15 @@ interface IAboutListProps {
   hardskillsObj: IHardSkillsList
 }
 
-interface IAboutProps extends IAboutListProps {
+interface IAboutProps extends IAboutListProps, IImagesByProps {
   addToRefs(e: never): void
+}
+
+interface IImagesByProps {
+  photo: string
+}
+
+interface IPhotos extends IHardSkills {
 }
 
 export type {
@@ -46,5 +53,7 @@ export type {
   IProjectCard,
   IHardSkillsList,
   IAboutListProps,
-  IAboutProps
+  IAboutProps,
+  IImagesByProps,
+  IPhotos
 }

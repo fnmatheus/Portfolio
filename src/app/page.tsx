@@ -6,7 +6,7 @@ import Projects from './components/projects';
 import Contact from './components/contact';
 import Footer from './components/footer';
 import { useEffect, useRef, useState } from 'react';
-import { IHardSkillsList, IProject } from './utils/interfaces';
+import { IHardSkillsList, IPhotos, IProject } from './utils/interfaces';
 import Loading from './loading';
 
 const getDataUrl = 'https://script.google.com/macros/s/AKfycbzazCxicyfNtMoScUVEBxB3SZOv2RFMwkFjGVyZj9jaidI1g-4WTt27BsjDvds7eupwag/exec';
@@ -17,6 +17,7 @@ export default function Home() {
   
   const [projectsArr, setProjectsArr] = useState<IProject[]>([]);
   const [hardskillsObj, setHardskillsObj] = useState<IHardSkillsList>(nullHardSkills);
+  const [photos, setPhotos] = useState<IPhotos[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   const addToRefs = (e: never) => {
@@ -31,9 +32,9 @@ export default function Home() {
         const response = await fetch(getDataUrl, {method: 'GET'});
         const data = await response.json();
         const {projects, hardSkills, images} = data;
-        await setProjectsArr(projects);
-        await setHardskillsObj(hardSkills);
-        console.log(projects)
+        setProjectsArr(projects);
+        setHardskillsObj(hardSkills);
+        setPhotos(images);
         setIsLoading(false);
       } catch (error) {
         console.log('error');
@@ -49,8 +50,8 @@ export default function Home() {
         <Loading /> :
         <div className="bg-darkGrey text-white">
           <Navbar ref={ navegationRef } />
-          <Openning ref={ navegationRef } />
-          <About addToRefs={ addToRefs } ref={ navegationRef } hardskillsObj={hardskillsObj} />
+          <Openning ref={ navegationRef } photo={photos[0].url} />
+          <About addToRefs={ addToRefs } ref={ navegationRef } hardskillsObj={hardskillsObj} photo={photos[1].url} />
           <Projects addToRefs={ addToRefs } ref={ navegationRef } projectsArr={projectsArr} />
           <Contact addToRefs={ addToRefs } ref={ navegationRef } />
           <Footer />
