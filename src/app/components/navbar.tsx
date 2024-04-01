@@ -15,7 +15,7 @@ function Navbar({}, ref: any) {
 
   return (
     <header className="w-screen border-b border-lightGrey fixed z-40 bg-darkGrey">
-      <div className="flex justify-between items-center h-[60px] w-screen pl-5 pr-[10px]">
+      <div className="flex justify-between items-center h-[60px] w-screen px-5">
         <Logo className="text-[35px]" />
         <Hamburger toggled={isOpen} toggle={setOpen} rounded size={22} />
       </div>
