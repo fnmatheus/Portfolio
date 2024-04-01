@@ -5,7 +5,7 @@ import { IAboutListProps, IHardSkillsList } from '../utils/interfaces';
 
 const hardskillsUrl = 'https://script.google.com/macros/s/AKfycbzorQBBFngf4LR645uShRF_eUkI_825_sfTcRhRBGz5_ftTURDjTeDmq62rjLM4grsZ/exec';
 
-export default function AboutList({ hardskillsObj }: IAboutListProps) {
+export default function AboutList({ hardskillsObj, cvLink }: IAboutListProps) {
   const [selected, setSelected] = useState('skills');
 
   const handleButton = (e: React.MouseEvent) => {
@@ -33,13 +33,16 @@ export default function AboutList({ hardskillsObj }: IAboutListProps) {
           <div className={`w-[40px] h-[3px] ${(selected !== 'certificates') ? 'bg-transparent' : 'bg-purple'} rounded-full`} />
         </button>
       </div>
-      <div className="h-max">
+      <div className="h-max flex flex-col gap-6">
         <ul className="list-inside list-disc grid lg:grid-cols-2">
           {
             hardskillsObj !== undefined &&
             hardskillsObj[selected as keyof IHardSkillsList].map(item => <li key={item.name}><a href={item.url} target="_blank">{ item.name }</a></li>)
           }
         </ul>
+        <a href={cvLink} target="_blank" className="flex justify-center items-center bg-gradient-to-l from-lightBlue to-purple w-full h-[45px] rounded-full text-xl">
+          baixar cv
+        </a>
       </div>
     </section>
   )

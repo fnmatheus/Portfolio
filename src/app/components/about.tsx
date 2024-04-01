@@ -17,10 +17,7 @@ function About({ addToRefs, hardskillsObj, photo, cvLink }: IAboutProps, ref: an
           <br />
           Minha jornada nesse mundo do desenvolvimento se deu ínicio quando tinha 12 anos. Atualmente busco poder ajudar, facilitar e solucionar problemas com minhas habilidades, sempre querendo aprender mais e ser melhor no que faço e amo.
         </p>
-        <AboutList hardskillsObj={hardskillsObj} />
-        <a href={cvLink} target="_blank" className="flex justify-center items-center bg-gradient-to-l from-lightBlue to-purple w-full lg:w-max h-[45px] rounded-full text-xl px-4">
-          baixar cv
-        </a>
+        <AboutList hardskillsObj={hardskillsObj} cvLink={cvLink} />
       </section>
     </section>
   )
