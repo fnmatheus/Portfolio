@@ -51,7 +51,7 @@ export default function Home() {
         <div className="bg-darkGrey text-white">
           <Navbar ref={ navegationRef } />
           <Openning ref={ navegationRef } photo={photos[0].url} />
-          <About addToRefs={ addToRefs } ref={ navegationRef } hardskillsObj={hardskillsObj} photo={photos[1].url} />
+          <About addToRefs={ addToRefs } ref={ navegationRef } hardskillsObj={hardskillsObj} photo={photos[1].url} cvLink={photos[2].url} />
           <Projects addToRefs={ addToRefs } ref={ navegationRef } projectsArr={projectsArr} />
           <Contact addToRefs={ addToRefs } ref={ navegationRef } />
           <Footer />

@@ -2,7 +2,7 @@ import { IAboutProps } from '../utils/interfaces';
 import AboutList from './aboutList';
 import React from 'react';
 
-function About({ addToRefs, hardskillsObj, photo }: IAboutProps, ref: any) {
+function About({ addToRefs, hardskillsObj, photo, cvLink }: IAboutProps, ref: any) {
   return (
     <section id="about" ref={ addToRefs } className="flex max-lg:flex-col justify-center items-center px-[34px] gap-8 lg:gap-26 pb-8 lg:pb-20">
       {
@@ -11,13 +11,10 @@ function About({ addToRefs, hardskillsObj, photo }: IAboutProps, ref: any) {
       }
       <section className="flex flex-col justify-center items-center gap-4 lg:w-max">
         <h2 className="font-bold text-3xl lg:text-4xl text-left w-full">Sobre mim</h2>
-        <p className="text-justify lg:text-lg">
-          Sou um jovem mineiro, apaixonado em tecnologia e bem criativo!
-          <br />
-          <br />
-          Minha jornada nesse mundo do desenvolvimento se deu ínicio quando tinha 12 anos. Atualmente busco poder ajudar, facilitar e solucionar problemas com minhas habilidades, sempre querendo aprender mais e ser melhor no que faço e amo.
+        <p className="lg:text-lg">
+        Desde criança, minha curiosidade sobre como as coisas funcionam, especialmente na área de tecnologia, me impulsionou a buscar soluções simples para problemas.<br /><br /> Aos 12 anos, tive meu primeiro contato com programação, focando em desenvolvimento de jogos. <br /><br />Atualmente, meu objetivo é criar soluções práticas para o dia a dia das pessoas e continuar expandindo meu conhecimento nessa área que sempre me motiva.
         </p>
-        <AboutList hardskillsObj={hardskillsObj} />
+        <AboutList hardskillsObj={hardskillsObj} cvLink={cvLink} />
       </section>
     </section>
   )

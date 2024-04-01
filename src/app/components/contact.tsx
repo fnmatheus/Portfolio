@@ -5,7 +5,7 @@ function Contact({ addToRefs }: any, ref: any) {
     <section id="contact" ref={ addToRefs } className="flex max-lg:flex-col justify-center items-center px-[34px] gap-4 w-full">
       <div className="flex flex-col gap-4">
         <h2 className="font-bold text-3xl lg:text-4xl">Entre em contato!</h2>
-        <p className="text-justify text-lg">
+        <p className="text-lg">
           Estou sempre olhando para novas oportunidade e disponivel para contato.
           <br />
           Se tiver alguma pergunta ou precisar entrar em contato, vou responder mais breve possível!

@@ -33,7 +33,8 @@ interface IHardSkillsList {
 }
 
 interface IAboutListProps {
-  hardskillsObj: IHardSkillsList
+  hardskillsObj: IHardSkillsList,
+  cvLink: string
 }
 
 interface IAboutProps extends IAboutListProps, IImagesByProps {
