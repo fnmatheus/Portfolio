@@ -37,7 +37,8 @@ interface IAboutListProps {
 }
 
 interface IAboutProps extends IAboutListProps, IImagesByProps {
-  addToRefs(e: never): void
+  addToRefs(e: never): void,
+  cvLink: string
 }
 
 interface IImagesByProps {
