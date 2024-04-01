@@ -10,6 +10,11 @@ interface IProject {
   id: number
 }
 
+interface IProjectProps {
+  addToRefs(e: never): void,
+  projectsArr: IProject[]
+}
+
 interface IProjectCard extends IProject {
   hiddenProject: number,
   handleProject(e: React.MouseEvent): void,
@@ -27,8 +32,19 @@ interface IHardSkillsList {
   certificates: IHardSkills[]
 }
 
+interface IAboutListProps {
+  hardskillsObj: IHardSkillsList
+}
+
+interface IAboutProps extends IAboutListProps {
+  addToRefs(e: never): void
+}
+
 export type {
   IProject,
+  IProjectProps,
+  IProjectCard,
   IHardSkillsList,
-  IProjectCard
+  IAboutListProps,
+  IAboutProps
 }

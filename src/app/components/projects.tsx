@@ -1,27 +1,11 @@
 "use client"
-import React, { useEffect, useState } from 'react';
-import { IProject } from '../utils/interfaces';
+import React, { useState } from 'react';
+import { IProjectProps } from '../utils/interfaces';
 import ProjectCard from './projectCard';
 
-const projectsUrl = 'https://script.google.com/macros/s/AKfycbwwttTjdDna2bMQaJY4HaGFzcCgxu6vN8-EbQBxqX8ZQzDGIWtSeJvTLDbDTlO4BjPVYg/exec';
-
-function Projects({ addToRefs }: any) {
+function Projects({ addToRefs, projectsArr }: IProjectProps) {
   const [fillter, setFillter] = useState('all');
   const [hiddenProject, setHiddenProject] = useState(0);
-  const [projectsArr, setProjectsArr] = useState<IProject[]>([]);
-
-  useEffect(() => {
-    const getData = async () => {
-      try {
-        const response = await fetch(projectsUrl, {method: 'GET'});
-        const data = await response.json();
-        setProjectsArr(data);
-      } catch (error) {
-        console.log('error');
-      }
-    };
-    getData();
-  }, []);
 
   const handleFillter = (e: React.MouseEvent) => {
     e.preventDefault();

@@ -1,26 +1,12 @@
 "use client"
 
 import React, { useEffect, useState } from 'react';
-import { IHardSkillsList } from '../utils/interfaces';
+import { IAboutListProps, IHardSkillsList } from '../utils/interfaces';
 
 const hardskillsUrl = 'https://script.google.com/macros/s/AKfycbzorQBBFngf4LR645uShRF_eUkI_825_sfTcRhRBGz5_ftTURDjTeDmq62rjLM4grsZ/exec';
 
-export default function AboutList() {
-  const [list, setList] = useState<IHardSkillsList>();
+export default function AboutList({ hardskillsObj }: IAboutListProps) {
   const [selected, setSelected] = useState('skills');
-
-  useEffect(() => {
-    const getData = async () => {
-      try {
-        const response = await fetch(hardskillsUrl, {method: 'GET'});
-        const data = await response.json();
-        setList(data);
-      } catch (error) {
-        console.log('error');
-      }
-    };
-    getData();
-  }, []);
 
   const handleButton = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -50,8 +36,8 @@ export default function AboutList() {
       <div className="h-max">
         <ul className="list-inside list-disc grid lg:grid-cols-2">
           {
-            list !== undefined &&
-            list[selected as keyof IHardSkillsList].map(item => <li key={item.name}><a href={item.url} target="_blank">{ item.name }</a></li>)
+            hardskillsObj !== undefined &&
+            hardskillsObj[selected as keyof IHardSkillsList].map(item => <li key={item.name}><a href={item.url} target="_blank">{ item.name }</a></li>)
           }
         </ul>
       </div>
